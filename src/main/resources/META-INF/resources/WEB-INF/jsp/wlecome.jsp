@@ -3,13 +3,13 @@
  	</head>
 	<body>
 		<div>
-			Welcome To login page
+			Welcome
 		</div>
-		
+		<hr>
 		<div>
 			Name : ${name}
-			Password : ${password}
 		</div>
 		
+		<div><a href="todo-list">Manage</a> your list</div>
 	</body>
 </html>

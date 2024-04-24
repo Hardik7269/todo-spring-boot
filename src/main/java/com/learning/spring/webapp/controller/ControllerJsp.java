@@ -1,4 +1,4 @@
-package com.learning.spring.todo.controller;
+package com.learning.spring.webapp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
