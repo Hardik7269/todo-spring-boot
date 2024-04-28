@@ -13,16 +13,18 @@ import jakarta.validation.Valid;
 public class TodoService {
 
 	private static int todoCount = 0;
-	private static List<Todo> todos = new ArrayList<>();;
+	private static List<Todo> todos = new ArrayList<Todo>();;
 
 	static {
-		todos.add(new Todo(++todoCount, "hardik", "Learn Gamming ", LocalDate.now().plusYears(1), false));
-		todos.add(new Todo(++todoCount, "chintan", "Learn AWS Certified", LocalDate.now().plusYears(2), false));
-		todos.add(new Todo(++todoCount, "hardik", "Learn Spring Boot", LocalDate.now().plusYears(3), false));
+		todos.add(new Todo(++todoCount, "Hardik", "Learn Gamming ", LocalDate.now().plusYears(1), false));
+		todos.add(new Todo(++todoCount, "Hardik", "Learn AWS Certified", LocalDate.now().plusYears(2), false));
+		todos.add(new Todo(++todoCount, "Hardik", "Learn Spring Boot", LocalDate.now().plusYears(3), false));
 	}
 	
 	public List<Todo> findTodoByName(String username){
-		return todos;
+		Predicate<? super Todo> predicate = todo -> todo.getUserName().equals(username);
+		return todos.stream().filter(predicate).toList();
+//		return todos; 
 	}
 	
 	public void addTodo(String username, String descripiton , LocalDate date , boolean isDone) {
