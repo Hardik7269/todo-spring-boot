@@ -44,6 +44,14 @@
 		    <version>11.0.0-M19</version>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>42.7.3</version>
+		</dependency>
+
+		
 		<dependency>
 		    <groupId>jakarta.servlet.jsp.jstl</groupId>
 		    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
@@ -53,13 +61,6 @@
 		    <groupId>org.eclipse.jetty</groupId>
 		    <artifactId>glassfish-jstl</artifactId>
 		    <version>11.0.20</version>
-		</dependency>
-
-		<dependency>
-		    <groupId>com.h2database</groupId>
-		    <artifactId>h2</artifactId>
-		    <scope>runtime</scope> 
-<!--		    dont want to database as a jar filel so scope is runtime-->
 		</dependency>
 		
 		<dependency>

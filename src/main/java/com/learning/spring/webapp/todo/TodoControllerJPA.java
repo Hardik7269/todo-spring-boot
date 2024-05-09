@@ -30,9 +30,9 @@ public class TodoControllerJPA {
 
 	@RequestMapping("todo-list")
 	public String listAllTodos(ModelMap model) {
-		String username = getLoggedInUserName(model);
-		List<Todo> todos = todoRepository.findByUsername(username);
+		List<Todo> todos = todoRepository.findAll();
 		model.put("todos", todos);
+		
 		return "listTodo";
 	}
 
@@ -53,10 +53,7 @@ public class TodoControllerJPA {
 
 		String username = getLoggedInUserName(model);
 		todo.setUsername(username);
-
 		todoRepository.save(todo);
-
-//		todoService.addTodo(username, todo.getDescription(), todo.getTargetDate(), todo.getDone());
 		// redirect will help -- in redirect add the path of mapping
 		return "redirect:todo-list";
 	}
@@ -82,10 +79,8 @@ public class TodoControllerJPA {
 		}
 
 		String username = getLoggedInUserName(model);
-//		todoService.updateTodoDetail(todo);
 		todo.setUsername(username);
 		todoRepository.save(todo);
-		// redirect will help -- in redirect add the path of mapping
 		return "redirect:todo-list";
 	}
 
