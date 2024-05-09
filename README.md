@@ -6,7 +6,7 @@
 - I have used the H2 in-memory database, which does not perform any persistent operations. 📃
 - For PostgresDB checkout to postgres branch.
 # Sneek Peek 👀
-- Login :-
+- Login :- [username : Hardik] [password : admin]
   ![image](https://github.com/Hardik7269/todo-spring-boot/assets/115152437/b7f8f8a7-e015-4118-820e-785e60d6582b)
 
 - Home Page :-
