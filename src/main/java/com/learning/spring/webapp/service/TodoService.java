@@ -1,4 +1,4 @@
-package com.learning.spring.webapp.todo;
+package com.learning.spring.webapp.service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import org.springframework.stereotype.Service;
+
+import com.learning.spring.webapp.todo.Todo;
 
 import jakarta.validation.Valid;
 

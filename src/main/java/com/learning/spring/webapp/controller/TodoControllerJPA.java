@@ -1,4 +1,4 @@
-package com.learning.spring.webapp.todo;
+package com.learning.spring.webapp.controller;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.learning.spring.webapp.Repository.TodoRepository;
+import com.learning.spring.webapp.todo.Todo;
 
 import jakarta.validation.Valid;
 
@@ -54,7 +55,6 @@ public class TodoControllerJPA {
 		String username = getLoggedInUserName(model);
 		todo.setUsername(username);
 		todoRepository.save(todo);
-		// redirect will help -- in redirect add the path of mapping
 		return "redirect:todo-list";
 	}
 
